@@ -1,3 +1,15 @@
+# FOR GIT SETUP
+# git config --global user.name "Your Name"
+# git config --global user.email "Your Email"
+
+#git init
+# git status => check the status of the repo
+# git diff => check the changes made
+# git add . => stage the changes
+# git commit-m "Your message" => commit the changes
+#copy paste git code from github
+
+import json
 import requests
 from bs4 import BeautifulSoup
 
@@ -33,7 +45,6 @@ def scrape_books(url):
 books = scrape_books(url)
 
 with open('books.json', 'w', encoding = 'utf-8') as f:
-    import json
     json.dump(books, f, indent=4, ensure_ascii=False)
         
 
